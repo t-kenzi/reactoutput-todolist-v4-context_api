@@ -3,6 +3,7 @@ import { AddTodo, TodoList } from "../organisms/index.js";
 import styles from "./style.module.css";
 import { useTodo } from "../../hooks/useTodo.js";
 import React from "react";
+import { useTodoContext } from "../../../hooks/useTodoContext";
 
 export const TodoTemplate = () => {
 
@@ -14,7 +15,7 @@ export const TodoTemplate = () => {
     handleAddTodo,
     handleDeleteTodo,
     handleChangeSearchKeyword,
-  } = useTodo();
+  }  = useTodoContext();
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Todo List</h1>
